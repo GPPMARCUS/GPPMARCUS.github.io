@@ -6,20 +6,88 @@ var imported = document.createElement('script');
 imported.src = './constant.js';
 document.head.appendChild(imported);
 
+var imported = document.createElement('script');
+imported.src = './empty.js';
+document.head.appendChild(imported);
+
+
+
+
 window.addEventListener('DOMContentLoaded', _e => {
   
     document.getElementById('intro').addEventListener('click', generateIntroFunction);
     document.getElementById('scene2').addEventListener('click', generateIntroFunction);
     document.getElementById('scene3').addEventListener('click', generateIntroFunction);
     document.getElementById('outro').addEventListener('click', generateIntroFunction);
-  
-    function generateIntroFunction(event) {
 
+    document.getElementById('intro').addEventListener('click', generateClip1Function);
+    document.getElementById('scene2').addEventListener('click', generateClip2Function);
+    document.getElementById('scene3').addEventListener('click', generateClip3Function);
+    document.getElementById('outro').addEventListener('click', generateClip4Function);
+
+    function generateClip1Function(event){
+        loc = event.target.gen_locations;
+        let a = event.target.gen_a;
+        if(!a){
+            clip_loc1 += loc;
+            button += 1;
+            a = "true";
+        }
+        event.target.gen_a = a;
+        if (button == 4){
+            document.getElementById('clipButton').innerHTML = "<button id=clip>Clip</button>";
+        }
+    }
+
+    function generateClip2Function(event){
+        loc = event.target.gen_locations;
+        let a = event.target.gen_a;
+        if(!a){
+            clip_loc2 += loc;
+            button += 1;
+            a = "true";
+        }
+        event.target.gen_a = a;
+        if (button == 4){
+            document.getElementById('clipButton').innerHTML = "<button id=clip>Clip</button>";
+        }
+    }
+
+    function generateClip3Function(event){
+        loc = event.target.gen_locations;
+        let a = event.target.gen_a;
+        if(!a){
+            clip_loc3 += loc;
+            button += 1;
+            a = "true";
+        }
+        event.target.gen_a = a;
+        if (button == 4){
+            document.getElementById('clipButton').innerHTML = "<button id=clip>Clip</button>";
+        }
+    }
+
+    function generateClip4Function(event){
+        loc = event.target.gen_locations;
+        let a = event.target.gen_a;
+        if(!a){
+            clip_loc4 += loc;;
+            button += 1;
+            a = "true";
+        }
+        event.target.gen_a = a;
+        if (button == 4){
+            document.getElementById('clipButton').innerHTML = "<button id=clip>Clip</button>";
+        }
+    }
+  
+    function generateIntroFunction(event) {   
+///---Vaste waardes scenes
         const locs = all_locs;
         let loc = event.target.gen_locations;
         if (!loc) {
             loc = locs[Math.floor(Math.random() * locs.length)];
-        }
+        }  
         
         const acts = all_acts;
         let act = event.target.gen_act;
@@ -78,22 +146,6 @@ window.addEventListener('DOMContentLoaded', _e => {
             licht1 = lichten1[Math.floor(Math.random()*lichten1.length)];
         }
 
-        if (form1 == 'gopro'){
-            var all_lenzen1 = all_lenzenGP;
-        }
-        else if (form1 == 'miniDV'){
-            var all_lenzen1 = all_lenzenDV;
-        }
-        else{
-            var all_lenzen1 = all_lenzen;
-        }
-
-        const lenzen1 = all_lenzen1;
-        let lens1 = event.target.gen_lens1;
-        if (!lens1) {
-            lens1 = lenzen1[Math.floor(Math.random()*lenzen1.length)];
-        }
-
         const kads1 = all_kads;
         let kad1 = event.target.gen_kad1;
         if (!kad1) {
@@ -142,22 +194,6 @@ window.addEventListener('DOMContentLoaded', _e => {
         let licht2 = event.target.gen_licht2;
         if (!licht2) {
             licht2 = lichten2[Math.floor(Math.random()*lichten2.length)];
-        }
-
-        if (form2 == 'gopro'){
-            var all_lenzen2 = all_lenzenGP;
-        }
-        else if (form2 == 'miniDV'){
-            var all_lenzen2 = all_lenzenDV;
-        }
-        else{
-            var all_lenzen2 = all_lenzen;
-        }
-
-        const lenzen2 = all_lenzen2;
-        let lens2 = event.target.gen_lens2;
-        if (!lens2) {
-            lens2 = lenzen2[Math.floor(Math.random()*lenzen2.length)];
         }
 
         const kads2 = all_kads;
@@ -215,22 +251,6 @@ window.addEventListener('DOMContentLoaded', _e => {
         let licht3 = event.target.gen_licht3;
         if (!licht3) {
             licht3 = lichten3[Math.floor(Math.random()*lichten3.length)];
-        }
-
-        if (form3 == 'gopro'){
-            var all_lenzen3 = all_lenzenGP;
-        }
-        else if (form3 == 'miniDV'){
-            var all_lenzen3 = all_lenzenDV;
-        }
-        else{
-            var all_lenzen3 = all_lenzen;
-        }
-
-        const lenzen3 = all_lenzen3;
-        let lens3 = event.target.gen_lens3;
-        if (!lens3) {
-            lens3 = lenzen3[Math.floor(Math.random()*lenzen3.length)];
         }
 
         const kads3 = all_kads;
@@ -298,22 +318,6 @@ window.addEventListener('DOMContentLoaded', _e => {
             licht4 = lichten4[Math.floor(Math.random()*lichten4.length)];
         }
 
-        if (form4 == 'gopro'){
-            var all_lenzen4 = all_lenzenGP;
-        }
-        else if (form4 == 'miniDV'){
-            var all_lenzen4 = all_lenzenDV;
-        }
-        else{
-            var all_lenzen4 = all_lenzen;
-        }
-
-        const lenzen4 = all_lenzen4;
-        let lens4 = event.target.gen_lens4;
-        if (!lens4) {
-            lens4 = lenzen4[Math.floor(Math.random()*lenzen4.length)];
-        }
-
         const kads4 = all_kads;
         let kad4 = event.target.gen_kad4;
         if (!kad4) {
@@ -362,7 +366,6 @@ window.addEventListener('DOMContentLoaded', _e => {
 
         event.target.gen_form1 = form1;
         event.target.gen_licht1 = licht1;
-        event.target.gen_lens1 = lens1;
         event.target.gen_kad1 = kad1;
         event.target.gen_shot1 = shot1;
         event.target.gen_zoom1 = zoom1;
@@ -372,7 +375,6 @@ window.addEventListener('DOMContentLoaded', _e => {
 
         event.target.gen_form2 = form2;
         event.target.gen_licht2 = licht2;
-        event.target.gen_lens2 = lens2;
         event.target.gen_kad2 = kad2;
         event.target.gen_shot2 = shot2;
         event.target.gen_zoom2 = zoom2;
@@ -382,7 +384,6 @@ window.addEventListener('DOMContentLoaded', _e => {
 
         event.target.gen_form3 = form3;
         event.target.gen_licht3 = licht3;
-        event.target.gen_lens3 = lens3;
         event.target.gen_kad3 = kad3;
         event.target.gen_shot3 = shot3;
         event.target.gen_zoom3 = zoom3;
@@ -392,7 +393,6 @@ window.addEventListener('DOMContentLoaded', _e => {
 
         event.target.gen_form4 = form4;
         event.target.gen_licht4 = licht4;
-        event.target.gen_lens4 = lens4;
         event.target.gen_kad4 = kad4;
         event.target.gen_shot4 = shot4;
         event.target.gen_zoom4 = zoom4;
@@ -402,24 +402,22 @@ window.addEventListener('DOMContentLoaded', _e => {
 
       
       document.getElementById('inhoud').innerHTML = 
-      "<table id=sceneInhoud><tr><th id=tabletopth>Locatie</th><td id=tabletoptd>" + loc + "</td></tr>" 
-      + "<tr><th>Actie</th><td>" + act + "</td></tr>"
-      + "<tr><th>Mensen</th><td>" + mens + "</td></tr>"
-      + "<tr><th>Kleur</th><td>" + kleurmode + " " + kleur + "</td></tr>"
+      "<table id=sceneInhoud><tr><th id=tabletopth>Setting</th><td id=tabletoptd>" + loc + "</td></tr>" 
+      + "<tr><th>Prompt</th><td>" + act + "</td></tr>"
+      + "<tr><th>People</th><td>" + mens + "</td></tr>"
+      + "<tr><th>Color</th><td>" + kleurmode + " " + kleur + "</td></tr>"
       + "<tr><th>Aspect ratio</th><td>" + asp + "</td></tr>"
-      + "<tr><th id=tablebottomth>Saus</th><td id=tablebottomtd>" + saus + "</td></tr></table>" 
+      + "<tr><th id=tablebottomth>Extra</th><td id=tablebottomtd>" + saus + "</td></tr></table>" 
       + "<br><br>"
-      + "<table><tr><th id=tabletopth></th><th id=tableTake>Take 01</th><th id=tableTake>Take 02</th><th id=tableTake>Take 03</th><th id=tableTake2>Take 04</th></tr>"
+      + "<table><tr><th id=tabletopth></th><th id=tableTake>Performance 01</th><th id=tableTake>Performance 02</th><th id=tableTake>Performance 03</th><th id=tableTake2>Performance 04</th></tr>"
       + "<tr><th>Format</th><td>" + form1 + "</td><td>" + form2 + "</td><td>" + form3 + "</td><td>" + form4 + "</td></tr>"
-      + "<tr><th>Licht</th><td>" + licht1 + "</td><td>" + licht2 + "</td><td>" + licht3 + "</td><td>" + licht4 + "</td></tr>"
-      + "<tr><th>Lens</th><td>" + lens1 + "</td><td>" + lens2 + "</td><td>" + lens3 + "</td><td>" + lens4 + "</td></tr>"
-      + "<tr><th>Kader</th><td>" + kad1 + "</td><td>" + kad2 + "</td><td>" + kad3 + "</td><td>" + kad4 + "</td></tr>"
+      + "<tr><th>Lighting</th><td>" + licht1 + "</td><td>" + licht2 + "</td><td>" + licht3 + "</td><td>" + licht4 + "</td></tr>"
+      + "<tr><th>Frame</th><td>" + kad1 + "</td><td>" + kad2 + "</td><td>" + kad3 + "</td><td>" + kad4 + "</td></tr>"
       + "<tr><th>Shot type</th><td>" + shot1 + "</td><td>" + shot2 + "</td><td>" + shot3 + "</td><td>" + shot4 + "</td></tr>"
       + "<tr><th>Zoom</th><td>" + zoom1 + "</rtd><td>" + zoom2 + "</rtd><td>" + zoom3 + "</rtd><td>" + zoom4 + "</td></tr>"
-      + "<tr><th>Beweging</th><td>" + grip1 + " " + move1 + "</td><td>" + grip2 + " " + move2 + "</td><td>" + grip3 + " " + move3 + "</td><td>" + grip4 + " " + move4 + "</td></tr>"
-      + "<tr><th id=tablebottomth>Performance</th><td>" + perf1 + "</td><td>" + perf2 + "</td><td>" + perf3 + "</td><td id=tablebottomtd>" + perf4 + "</td></tr></table>"
+      + "<tr><th id=tablebottomth>Movement</th><td>" + grip1 + " " + move1 + "</td><td>" + grip2 + " " + move2 + "</td><td>" + grip3 + " " + move3 + "</td><td>" + grip4 + " " + move4 + "</td></tr></table>"
       + "<br>"
-      + "<button onclick=window.location.reload()>Refresh</button></a> "
+      + "<button onclick=window.location.reload()>Refresh</button></a>";
     }
   
   });

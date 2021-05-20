@@ -7,21 +7,19 @@ function numberFunction(){
 
 window.addEventListener('DOMContentLoaded', _e => {
   
-   document.getElementById('intro').addEventListener('click', number1Function);
+    document.getElementById('intro').addEventListener('click', number1Function);
 
-
-
-   function number1Function() {
-       document.getElementById('sceneNumber').innerHTML="<h1>Clip 01 Scene 01<h1>";
+    function number1Function() {
+        document.getElementById('sceneNumber').innerHTML="<h1>Clip 01 Scene 01<h1>";
    }
 });
 
 window.addEventListener('DOMContentLoaded', _e => {
   
- document.getElementById('scene2').addEventListener('click', number1Function);
+    document.getElementById('scene2').addEventListener('click', number1Function);
 
-  function number1Function() {
-      document.getElementById('sceneNumber').innerHTML="<h1>Clip 01 Scene 02<h1>";
+    function number1Function() {
+        document.getElementById('sceneNumber').innerHTML="<h1>Clip 01 Scene 02<h1>";
    }
 });
 
@@ -43,3 +41,11 @@ window.addEventListener('DOMContentLoaded', _e => {
     }
 });
 
+window.addEventListener('DOMContentLoaded', _e => {
+  
+    document.getElementById('clipButton').addEventListener('click', number5Function);
+   
+    function number5Function(event) {
+        document.getElementById('sceneNumber').innerHTML="<h1>Clip<h1>";
+    }
+});

@@ -1,6 +1,23 @@
 body{
   background-color: #262F4C;
+  font-family: 'Open Sans', sans-serif;;
 }
+
+
+h1 {
+  color: white;
+  text-align: left;
+}
+
+
+h2 {
+  color: black;
+  font-size: 30px;
+  text-align: left;
+  line-height: 5px; 
+  display:block;
+}
+
 
 button{
   background-color: red;
@@ -14,23 +31,40 @@ button{
   color: white;
 }
 
-h1 {
-    color: white;
-    text-align: left;
-  }
 
-h2 {
-    color: black;
-    font-size: 30px;
-    text-align: left;
-    line-height: 5px; 
-    display:block;
-}
-
-#sceneInhoud{
+table {
   border-collapse: collapse;
-  width: 20%;
+  vertical-align: right;
 }
+th{
+  background-color: rgb(32, 155, 192);
+  text-align: right;
+  padding-right: 8px;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+}
+td {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 1px solid #3F4F6D;
+    text-align: left;
+    padding: 8px;
+    width: 275px;
+}
+
+
+#tableTake{
+  text-align: left;
+  padding: 8px;
+}
+#tableTake2{
+  text-align: left;
+  padding: 8px;
+  border-radius: 0px 5px 0px 0px;
+}
+
 
 #tabletopth{
   border-radius: 5px 0px 0px 0px;
@@ -46,6 +80,10 @@ h2 {
   border-radius: 0px 0px 5px 0px;
 }
 
+
+#sceneInhoud{
+  border-collapse: collapse;
+}
 #sceneInhoud th{
   padding-right: 8px;
   font-size: 22px;
@@ -53,58 +91,30 @@ h2 {
   color: white;
   border: none;
   text-align: right;
-  width: 20%;
+  width: 150px;
 }
-
 #sceneInhoud td{
     color: black;
     background-color: white;
     border: none;
     font-size: 22px;
+    width: 275px;
 }
 
-table {
-    border-collapse: collapse;
-    width: 50%;
-    vertical-align: right;
-}
 
-#tableTake{
-  text-align: left;
-  padding: 8px;
-}
-#tableTake2{
-  text-align: left;
-  padding: 8px;
+#tabletoptdclip{
   border-radius: 0px 5px 0px 0px;
+  text-align: left;
 }
 
-th{
-  background-color: rgb(32, 155, 192);
-  text-align: right;
-  padding-right: 8px;
-  color: white;
-  font-size: 20px;
+
+@media only screen and (max-device-width: 480px) {
+  h1{
+    font-size: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 }
-
-td {
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    border: 1px solid #3F4F6D;
-    text-align: left;
-    padding: 8px;
-    width: 20%;
-  }
-
-
-  @media only screen and (max-device-width: 480px) {
-    h1{
-      font-size: 10px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-  }

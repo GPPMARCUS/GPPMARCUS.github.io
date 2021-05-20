@@ -1,0 +1,3 @@
+event.target.gen_effect1 = effect1;
+        event.target.gen_effect2 = effect2;
+        event.target.gen_effect3 = effect3;

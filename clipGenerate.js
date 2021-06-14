@@ -54,12 +54,34 @@ window.addEventListener('DOMContentLoaded', _e => {
             effect3 = effecten3[Math.floor(Math.random()*effecten3.length)];
         }
 
+        const zooms1 = all_zooms;
+        let zoom1 = event.target.gen_zoom1;
+        if (!zoom1) {
+            zoom1 = zooms1[Math.floor(Math.random()*zooms1.length)];
+        }
+
+        
+        const zooms2 = all_zooms;
+        let zoom2 = event.target.gen_zoom2;
+        if (!zoom2) {
+            zoom2 = zooms2[Math.floor(Math.random()*zooms2.length)];
+        }
+        
+        const zooms3 = all_zooms;
+        let zoom3 = event.target.gen_zoom3;
+        if (!zoom3) {
+            zoom3 = zooms3[Math.floor(Math.random()*zooms3.length)];
+        }
+
         event.target.gen_lens1 = lens1;
         event.target.gen_lens2 = lens2;
         event.target.gen_lens3 = lens3;
         event.target.gen_effect1 = effect1;
         event.target.gen_effect2 = effect2;
         event.target.gen_effect3 = effect3;
+        event.target.gen_zoom1 = zoom1;
+        event.target.gen_zoom2 = zoom2;
+        event.target.gen_zoom3 = zoom3;
 
 
         if(button == 4){
@@ -67,10 +89,10 @@ window.addEventListener('DOMContentLoaded', _e => {
         + "<tr><th>Intro</th><td>" + clip_loc1 + "</td></tr>"
         + "<tr><th>Scene 2</th><td>" + clip_loc2 + "</td></tr>"
         + "<tr><th>Scene 3</th><td>" + clip_loc3 + "</td></tr>"
-        + "<tr><th id=tablebottomth>Outro</th><td id=tablebottomtd>" + clip_loc4 + "</td></tr></table>" 
+        + "<tr><th id=tablebottomth>Outro</th><td id=tablebottomtd>" + clip_loc2 + "</td></tr></table>" 
         + "<br><br>"
-        + "<table id=clipTable><tr><th id=tabletopth>Lenzen</th><td id=tabletoptd>" + lens1 + ", " + lens2 + ", " + lens3 + "</th></tr>"
-        + "<tr><th id=tablebottomth>Effecten</th><td id=tablebottomtd>" + effect1 + ", " + effect2 + ", " + effect3 + "</tr></table>"
+        + "<table id=clipTable><tr><th id=tabletopth>Lenzen</th><td id=tabletoptd>" + lens1 + ", " + lens2 + ", " + lens3 + "</td></tr>"
+        + "<tr><th id=tablebottomth>Effecten</th><td id=tablebottomtd>" + effect1 + ", " + effect2 + ", " + effect3 + "</td></tr></table>"
         + "<br>"
         + "<button onclick=window.location.reload()>Refresh</button></a>";
         }

@@ -12,10 +12,10 @@ var all_locs = ['Car', 'Terrace', 'Cocktailbar', 'Party', 'Parkinglot', 'Tunnel'
 'Thrift store','Farm','Tent','Stadium','Electronics shop','Night shop','Grass','Sand','Water','Library','Mirrors','Greenhouse',
 'White','Black','Under bridge','Flower field','Fly over'];
 
-var all_acts = ['Lopen', 'Eten', 'Staan', 'Knielen', 'Kijken', 'Vechten', 'Dronken', 'Liggen','Hangen','Springen','Huilen',
-'Rennen','Dansen','Lachen','Werken','Bidden','Roken','Wassen','Vieren','Wachten','Ziek','Bang','Paranoia','Koken','Maken',
-'Mediteren','Verzorgen','Slapen','Verstoppen','Intiem','Genieten','Verdoven','Klimmen','Praten','Reizen','Hobby','Sport',
-'Bouwen','Kunst','Lezen','Presenteren','Gooien','Vallen','Geven','Stelen','Slopen','Spelen','Playful','Proxy','Daylight','All',
+var all_acts = ['Walking', 'Eating', 'Stand', 'Kneeling', 'Looking', 'Fighting', 'Drunk', 'Lying','Hanging','Jumping','Crying',
+'Running','Dancing','Laughing','Working','Praying','Smoking','Washing','Celebrate','Waiting','Sick','Afraid','Paranoid','Cooking','Making',
+'Meditate','Sleeping','Hiding','Intimate','Enjoying','Stun','Climbing','Talking','Travelling','Hobby','Sports',
+'Building','Art','Reading','Presenting','Throwing','Falling','Give','Stealing','Demolishing','Playing','Playful','Proxy','Daylight','All',
 'Shatter','Embarassment','Strange','Entertainment','Without','Overwhelmed','Ladder','Curiosity','Easy','Worship','Set',
 'Ultimatum','Essay','Radiance','Welcome','Safety','Skin','Adapt','Betrayal','Physics','Asleep','Machine','Talk','Embrace',
 'Tattoo','Dent','Village','Motivation','World','Cult','Colorful','Lush','Ride','Potatoes','Dust','Leaves','Vulnerable',
@@ -53,12 +53,12 @@ var all_acts = ['Lopen', 'Eten', 'Staan', 'Knielen', 'Kijken', 'Vechten', 'Dronk
 
 var all_mensen = ['1', '2', '3', '4', '5', '6+'];
 
-var all_kleurmodes = ['Zwart/Wit', 'Gesatureerd', 'Gesatureerd', 'Gedesatureerd', 'Gedesatureerd'];
+var all_kleurmodes = ['Black & White', 'Saturated', 'Saturated', 'Desaturated', 'Desaturated'];
 
-var all_kleuren = ['Rood', 'Oranje', 'Geel', 'Groen', 'Blauw', 'Cyaan', 'Magenta', 'Wit'];
+var all_kleuren = ['red', 'orange', 'yellow', 'green', 'blue', 'cyan', 'magenta', 'white'];
 var all_kleurenZW = [''];
 
-var all_asps = ['16:9', '4:3', 'cinemascope', 'vierkant','16:9', '4:3', 'cinemascope', 'vierkant','16:9', '4:3', 'cinemascope'];
+var all_asps = ['16:9', '4:3', 'Cinemascope','16:9', '4:3', 'Cinemascope','16:9', '4:3', 'Cinemascope'];
 
 var all_sauzen = ['Stroboscoop','Regen','Rook','Bojack Horseman intro','Greenscreen suits','Natural wipes','Turbulent displace','Snelle B-roll',
 'Bubbels','Action cam','360 cam','Low shutterspeed','Vuur','Astera practical','Wind','Zaklamp practical','Prisma','miniDV selfie','Snijspot',
@@ -68,17 +68,17 @@ var all_forms = ['digitaal','digitaal','digitaal','digitaal','miniDV','8mm','16m
 
 var all_lichten = ['toplight','underlight','side light','backlight','meelicht'];
 
-var all_lenzen = ['fisheye', 'wijd', 'medium', 'long', 'tele','zoom'];
+var all_lenzen = ['fisheye', 'wide', 'medium', 'long', 'tele','zoom'];
 var all_lenzenGP = ['stock'];
 var all_lenzenDV = ['stock'];
 
-var all_kads = ['extreem wijd', 'wijd', 'medium wijd', 'medium', 'medium close', 'close', 'extreme close'];
+var all_kads = ['extreme wide', 'wide', 'medium wide', 'medium', 'medium close', 'close', 'extreme close','zoom'];
 
-var all_shots = ['vogelvlucht', 'kikvors', 'dutch angle','level','level','level','level'];
+var all_shots = ['birdseye', 'frog perspective', 'dutch angle','leveled','leveled','leveled'];
 
 var all_zooms = ['in', 'uit', 'niet','niet','niet','niet'];
 
-var all_grips = ['statief', 'handheld', 'heftig','handheld'];
+var all_grips = ['tripod', 'handheld', 'shaky','handheld'];
 
 var all_moves = ['omheen draaien','draaien','beweeg in','beweeg in','beweeg uit','beweeg uit','vast','vast','vast','vast','vast'];
 
@@ -86,5 +86,5 @@ var all_perfs = ['energiek', 'droog', 'geen','samen','boos','blij','serieus','ha
 
 var button = 0;
 
-var all_effecten = ['drieluik', 'tweeluik', 'lightleaks','fotos extern','fotos op set','fotos BTS','versnellen','slowmotion','glitches','fades','overlays',
-'picture in picture','archiefbeeld','digital zoom','karaoke tekst'];
+var all_effecten = ['triptych', 'diptych', 'lightleaks','random pictures','pictures on set','pictures BTS','speed up','slowmotion','glitches','fades','overlays',
+'picture in picture','archival footage','digital zoom','karaoke text'];

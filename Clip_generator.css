@@ -1,11 +1,11 @@
 body{
-  background-color: #262F4C;
+  background-color: #e6e6e6;
   font-family: 'Open Sans', sans-serif;;
 }
 
 
 h1 {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: left;
 }
 
@@ -20,7 +20,7 @@ h2 {
 
 
 button{
-  background-color: red;
+  background-color: rgb(196, 17, 17);
   border: none;
   border-radius: 10px;
   width: 125px;
@@ -37,18 +37,18 @@ table {
   vertical-align: right;
 }
 th{
-  background-color: rgb(32, 155, 192);
+  background-color: rgb(49, 49, 49);
   text-align: right;
   padding-right: 8px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
   width: 150px;
 }
 td {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
     font-size: 20px;
-    border: 1px solid #3F4F6D;
+    border: 1px solid #4e4e4e;
     text-align: left;
     padding: 8px;
     width: 275px;
@@ -87,7 +87,7 @@ td {
 #sceneInhoud th{
   padding-right: 8px;
   font-size: 22px;
-  background-color: rgb(32, 155, 192);
+  background-color: rgb(49, 49, 49);
   color: white;
   border: none;
   text-align: right;
@@ -96,9 +96,10 @@ td {
 #sceneInhoud td{
     color: black;
     background-color: white;
-    border: none;
+    border: 1px solid #4e4e4e;
     font-size: 22px;
     width: 275px;
+    
 }
 
 

@@ -91,8 +91,8 @@ window.addEventListener('DOMContentLoaded', _e => {
         + "<tr><th>Scene 3</th><td>" + clip_loc3 + "</td></tr>"
         + "<tr><th id=tablebottomth>Outro</th><td id=tablebottomtd>" + clip_loc2 + "</td></tr></table>" 
         + "<br><br>"
-        + "<table id=clipTable><tr><th id=tabletopth>Lenses</th><td id=tabletoptd>" + lens1 + ", " + lens2 + ", " + lens3 + "</td></tr>"
-        + "<tr><th id=tablebottomth>Effects</th><td id=tablebottomtd>" + effect1 + ", " + effect2 + ", " + effect3 + "</td></tr></table>"
+        + "<table id=clipTable><tr><th id=tabletopth>Lenzen</th><td id=tabletoptd>" + lens1 + ", " + lens2 + ", " + lens3 + "</td></tr>"
+        + "<tr><th id=tablebottomth>Effecten</th><td id=tablebottomtd>" + effect1 + ", " + effect2 + ", " + effect3 + "</td></tr></table>"
         + "<br>"
         + "<a href=Clip_generator.html><button>Refresh</button></a>";
         }

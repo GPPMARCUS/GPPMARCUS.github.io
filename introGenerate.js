@@ -23,18 +23,6 @@ window.addEventListener('DOMContentLoaded', _e => {
     document.getElementById('scene3').addEventListener('click', generateClip3Function);
     document.getElementById('outro').addEventListener('click', generateClip4Function);
 
-    document.getElementById('aboutButton').addEventListener('click', aboutFunction);
-
-    function aboutFunction(){
-
-        document.getElementById('sceneNumber').innerHTML = "<h1>About</h1>";
-        
-        ///de tekst hieronder bij <p id=about> moet je aanpassen. breedte enzo staat ingesteld dus daar hoef je geen zorgen over te maken. Bij een enter
-        ///moet je wel ff eindigen met " en dan opnieuw beginnen  + "en dan hierin je tekst"
-        document.getElementById('inhoud').innerHTML = "<p id=about>Hallo hier staat tekst over mij</p>"
-        + "<a href=Clip_generator.html><button>Refresh</button></a>";
-    }
-
     function generateClip1Function(event){
         loc = event.target.gen_locations;
         let a = event.target.gen_a;

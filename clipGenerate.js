@@ -94,7 +94,7 @@ window.addEventListener('DOMContentLoaded', _e => {
         + "<table id=clipTable><tr><th id=tabletopth>Lenzen</th><td id=tabletoptd>" + lens1 + ", " + lens2 + ", " + lens3 + "</td></tr>"
         + "<tr><th id=tablebottomth>Effecten</th><td id=tablebottomtd>" + effect1 + ", " + effect2 + ", " + effect3 + "</td></tr></table>"
         + "<br>"
-        + "<button onclick=window.location.reload()>Refresh</button></a>";
+        + "<a href=Clip_generator.html><button>Refresh</button></a>";
         }
         else{
             document.getElementById('inhoud').innerHTML = "<h1>Genereer eerst alle scenes om hier een samenvatting te zien</h1>";

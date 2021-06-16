@@ -11,8 +11,6 @@ imported.src = './empty.js';
 document.head.appendChild(imported);
 
 
-
-
 window.addEventListener('DOMContentLoaded', _e => {
   
     document.getElementById('intro').addEventListener('click', generateIntroFunction);
@@ -24,6 +22,18 @@ window.addEventListener('DOMContentLoaded', _e => {
     document.getElementById('scene2').addEventListener('click', generateClip2Function);
     document.getElementById('scene3').addEventListener('click', generateClip3Function);
     document.getElementById('outro').addEventListener('click', generateClip4Function);
+
+    document.getElementById('aboutButton').addEventListener('click', aboutFunction);
+
+    function aboutFunction(){
+
+        document.getElementById('sceneNumber').innerHTML = "<h1>About</h1>";
+        
+        ///de tekst hieronder bij <p id=about> moet je aanpassen. breedte enzo staat ingesteld dus daar hoef je geen zorgen over te maken. Bij een enter
+        ///moet je wel ff eindigen met " en dan opnieuw beginnen  + "en dan hierin je tekst"
+        document.getElementById('inhoud').innerHTML = "<p id=about>Hallo hier staat tekst over mij</p>"
+        + "<a href=Clip_generator.html><button>Refresh</button></a>";
+    }
 
     function generateClip1Function(event){
         loc = event.target.gen_locations;
@@ -280,7 +290,7 @@ window.addEventListener('DOMContentLoaded', _e => {
       + "<tr><th>Shot type</th><td>" + shot1 + "</td><td>" + shot2 + "</td><td>" + shot3 + "</td><td>" + shot4 + "</td></tr>"
       + "<tr><th id=tablebottomth>Movement</th><td>" + grip1 + "</td><td>" + grip2 + "</td><td>" + grip3 + "</td><td>" + grip4 + "</td></tr></table>"
       + "<br>"
-      + "<button onclick=window.location.reload()>Refresh</button></a>";
+      + "<a href=Clip_generator.html><button>Refresh</button></a>";
     }
   
   });
